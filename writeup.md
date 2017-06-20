@@ -14,12 +14,6 @@ your comment goes here
 
 [//]: # (Image References)
 
-[image1]: test_images_output/i_gray.png "Gray"
-[image2]: test_images_output/i_blurred.png "Blurred Gray"
-[image3]: test_images_output/i_canny.png "Canny Edge Detection"
-[image4]: test_images_output/i_mask1.png "Canny Edge Detection (Mask applied)"
-[image5]: test_images_output/i_mask2.png "Mask Lines"
-[image6]: test_images_output/i_hough.png "Lines Detected (Hough Transform)"
 ---
 
 ### Reflection
@@ -29,19 +23,19 @@ your comment goes here
 * My pipeline consisted of 6 steps: 
 	
     1. First, I converted the input image to gray-scale, a necessary prior process to compute the gradient and the edge-detection later. An illustration is shown in the next figure:
-    ![alt text][image1]
+    <img src="test_images_output/i_gray.png" width="400"> 
         
     1. Second, we apply a Gaussian smoothing kernel (size: 5 pixels) to the Gray image. The result is as shown below:
-    ![alt text][image2]
+    <img src="test_images_output/i_blurred.png" width="400">
 
     1. Third, we apply the Canny detection algorithm in the Blurred Gray image. We find that a low(high) threshold of 10(250) maximizes the detection of line edges in the image. This combination of parameters also filters out false positive detection of edges in the road, as shown in the next Figure:
-    ![alt text][image3]
+    <img src="test_images_output/i_canny.png" width="400">
 
     1. But we're only interested in objects within the road, therefore we apply a mask to filter any detection outside a region of interest (ROI) which is an user-input. Our ROI is a 4-side polygon, which roughly delimits a lane in the field of view of the camera. The defined ROI and its effect in the Canny output image are shown below: 
-    ![alt text][image5]  ![alt-text][image4]
+    <img src="test_images_output/i_mask2.png" width="400"> <img src="test_images_output/i_mask1.png" width="400"> 
     
     1. Fifth, we want to identify lines in the output of the Canny Edge image. To this end we adjusted all the parameters of the Hough Transform in polar coordinates until we obtained a good result. Other than the resolution parameters, critical ones include the # of intersections in a Hough cell (=10), the # of pixels making up a line (=1), and the maximum gap between connectible line segments (=1 pixel). The result is shown in the next Figure:
-    ![alt text][image6]
+    <img src="test_images_output/i_hough.png" width="400">
 
     1. Finally we co-add the line image (from the Hough Transform) with the original input. These results will be shown in the next Section.
 
@@ -79,6 +73,7 @@ solidYellowCurve2
 ---
 
 solidYellowCurve
+
 <img src="test_images_output/solidYellowCurve_1.jpg" width="400"> <img src="test_images_output/solidYellowCurve_2.jpg" width="400"> 
 
 ---
@@ -90,6 +85,7 @@ whiteCarLaneSwitch
 ---
 
 solidYellowLeft
+
 <img src="test_images_output/solidYellowLeft_1.jpg" width="400"> <img src="test_images_output/solidYellowLeft_2.jpg" width="400"> 
 
 ---
