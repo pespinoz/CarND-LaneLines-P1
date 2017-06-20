@@ -60,23 +60,39 @@ your comment goes here
 
 Here we show the results of the pipeline in the test images. In the left column we have results for the original draw_line() function, and in the right column we have the results for the improved draw_line() function:
 
-solidWhiteCurve:
+solidWhiteCurve
+
 <img src="test_images_output/solidWhiteCurve_1.jpg" width="400"> <img src="test_images_output/solidWhiteCurve_2.jpg" width="400"> 
+
 ---
+
 solidWhiteRight
+
 <img src="test_images_output/solidWhiteRight_1.jpg" width="400"> <img src="test_images_output/solidWhiteRight_2.jpg" width="400"> 
+
 ---
+
 solidYellowCurve2
+
 <img src="test_images_output/solidYellowCurve2_1.jpg" width="400"> <img src="test_images_output/solidYellowCurve2_2.jpg" width="400"> 
+
 ---
+
 solidYellowCurve
 <img src="test_images_output/solidYellowCurve_1.jpg" width="400"> <img src="test_images_output/solidYellowCurve_2.jpg" width="400"> 
+
 ---
+
 whiteCarLaneSwitch
+
 <img src="test_images_output/whiteCarLaneSwitch_1.jpg" width="400"> <img src="test_images_output/whiteCarLaneSwitch_2.jpg" width="400"> 
+
 ---
+
 solidYellowLeft
 <img src="test_images_output/solidYellowLeft_1.jpg" width="400"> <img src="test_images_output/solidYellowLeft_2.jpg" width="400"> 
+
+---
 
 
 ### 2. Identify potential shortcomings with your current pipeline
